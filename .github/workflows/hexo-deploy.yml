@@ -1,6 +1,12 @@
 name: Hexo Auto Deploy
 
-# 仅在 source 分支推送代码时触发
+# 关键：授予推送代码到 master 分支的权限（必加，否则 GITHUB_TOKEN 无权限）
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+# 仅在 source 分支推送代码时触发（匹配你的源码分支）
 on:
   push:
     branches:
@@ -10,48 +16,50 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      # 检出 source 分支代码（包含主题子模块）
+      # 检出 source 分支的源码（包含主题子模块，保证构建完整）
       - name: Checkout source code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           submodules: recursive
 
-      # 设置 Node.js 环境
+      # 升级 Node.js 到 LTS 20（16已淘汰，避免兼容报错）
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '16'
-          cache: 'npm'
+          node-version: '20'
+          cache: 'npm'  # 缓存 npm 依赖，加速部署
 
-      # 安装 Hexo 和博客依赖
+      # 安装依赖（保留你原有 strip-ansi 强制安装逻辑，解决版本冲突）
       - name: Install dependencies
         run: |
-    npm install -g hexo-cli
-    npm install  # 安装基础依赖
-    npm install strip-ansi@6.0.1 --force  # 强制安装兼容版本，覆盖高版本
+          set -e  # 遇到错误立即终止，方便定位问题
+          npm install -g hexo-cli
+          npm install  # 安装基础依赖
+          npm install strip-ansi@6.0.1 --force  # 保留你的强制安装逻辑
 
-      # 构建静态文件
+      # 构建静态文件（clean 清空旧文件，generate 生成新静态文件）
       - name: Build Hexo static files
         run: |
+          set -e
           hexo clean
           hexo generate
 
-      # 配置 Git 身份
+      # 配置 Git 身份（保证提交记录归属合法）
       - name: Configure Git user
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
 
-      # 推送静态文件到 master 分支
+      # 推送静态文件到 master 分支（保留 --force 确保覆盖，匹配你的 Pages 配置）
       - name: Deploy to master branch
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # 你的仓库地址（已适配）
           REPO_URL: https://github.com/Jaylin03/Jaylin03.github.io.git
         run: |
-          cd public
+          set -e
+          cd public  # 进入 Hexo 生成的静态文件目录
           git init
           git add .
-          git commit -m "Auto deploy: $(date +'%Y-%m-%d %H:%M:%S')"
-          git push --force $REPO_URL master
+          git commit -m "Auto deploy: $(date +'%Y-%m-%d %H:%M:%S')"  # 带时间戳的提交信息
+          git push --force $REPO_URL master  # 强制推送（保证静态文件完全覆盖 master 分支）

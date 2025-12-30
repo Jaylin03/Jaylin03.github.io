@@ -21,14 +21,15 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '16'
           cache: 'npm'
 
       # 安装 Hexo 和博客依赖
       - name: Install dependencies
         run: |
-          npm install -g hexo-cli
-          npm install
+    npm install -g hexo-cli
+    npm install  # 安装基础依赖
+    npm install strip-ansi@6.0.1 --force  # 强制安装兼容版本，覆盖高版本
 
       # 构建静态文件
       - name: Build Hexo static files

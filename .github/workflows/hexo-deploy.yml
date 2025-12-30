@@ -1,0 +1,57 @@
+name: Hexo Auto Deploy
+
+# 仅在 source 分支推送代码时触发
+on:
+  push:
+    branches:
+      - source
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 检出 source 分支代码（包含主题子模块）
+      - name: Checkout source code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: true
+          submodules-recursive: true
+
+      # 设置 Node.js 环境
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      # 安装 Hexo 和博客依赖
+      - name: Install dependencies
+        run: |
+          npm install -g hexo-cli
+          npm install
+
+      # 构建静态文件
+      - name: Build Hexo static files
+        run: |
+          hexo clean
+          hexo generate
+
+      # 配置 Git 身份
+      - name: Configure Git user
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      # 推送静态文件到 master 分支
+      - name: Deploy to master branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # 你的仓库地址（已适配）
+          REPO_URL: https://github.com/Jaylin03/Jaylin03.github.io.git
+        run: |
+          cd public
+          git init
+          git add .
+          git commit -m "Auto deploy: $(date +'%Y-%m-%d %H:%M:%S')"
+          git push --force $REPO_URL master

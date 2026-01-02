@@ -1,27 +1,28 @@
 # _config.butterfly.yml
 # --------------------------------------------------------
-# 导航菜单配置 (包含双语切换和留言板)
+# 导航菜单配置
 menu:
   Home: / || fas fa-home
   Archives: /archives/ || fas fa-archive
   Tags: /tags/ || fas fa-tags
   Categories: /categories/ || fas fa-folder-open
-  Guestbook: /guestbook/ || fas fa-comments  # 留言板
   List:
     Music: /music/ || fas fa-music
     Movie: /movies/ || fas fa-video
-  Language:
+  Guestbook: /guestbook/ || fas fa-comments
+  About: /about/ || fas fa-user
+  Languages:
     English: /en/ || fas fa-globe
     简体中文: / || fas fa-language
 
 # --------------------------------------------------------
 # 核心视觉配置
 avatar:
-  img: https://github.com/Jaylin03/blog-images/blob/master/logo_ln3_bull_v8.png # 请替换为你自己的头像链接
-  effect: true # 头像旋转效果
+  img: https://cdn.jsdelivr.net/gh/Jaylin03/blog-images@master/logo_ln3_bull_v8.png # 请替换为你自己的头像链接
+  effect: false # 头像旋转效果
 
 # 顶部图 (Banner)
-index_img: https://github.com/Jaylin03/blog-images/blob/master/home-design%20(2).jpg # 替换为你喜欢的首页大图
+index_img: https://cdn.jsdelivr.net/gh/Jaylin03/blog-images@master/home-design-2.jpg # 替换为你喜欢的首页大图
 
 # --------------------------------------------------------
 # 社交图标 (侧边栏和页脚)
@@ -70,3 +71,21 @@ local_search:
   enable: true
   preload: false
   # CDN: https://cdn.jsdelivr.net/npm/hexo-generator-search@2.4.3/dist/search.js
+
+# --------------------------------------------------------
+# 实时时间转换支持
+# 注入脚本和样式
+inject:
+  head:
+    # 引入 Day.js 库（如果主题没自带，可以通过这种方式引入）
+  bottom:
+    # 也可以开启主题自带的相对时间功能
+
+# Butterfly 相对时间设置
+post_meta:
+  page:
+    date_type: both
+    date_format: 'YYYY-MM-DD' # 可改为 relative 或自定义格式
+  post:
+    date_type: both
+    date_format: relative

@@ -1,0 +1,72 @@
+# _config.butterfly.yml
+# --------------------------------------------------------
+# 导航菜单配置 (包含双语切换和留言板)
+menu:
+  Home: / || fas fa-home
+  Archives: /archives/ || fas fa-archive
+  Tags: /tags/ || fas fa-tags
+  Categories: /categories/ || fas fa-folder-open
+  Guestbook: /guestbook/ || fas fa-comments  # 留言板
+  List:
+    Music: /music/ || fas fa-music
+    Movie: /movies/ || fas fa-video
+  Language:
+    English: /en/ || fas fa-globe
+    简体中文: / || fas fa-language
+
+# --------------------------------------------------------
+# 核心视觉配置
+avatar:
+  img: https://github.com/Jaylin03/blog-images/blob/master/logo_ln3_bull_v8.png # 请替换为你自己的头像链接
+  effect: true # 头像旋转效果
+
+# 顶部图 (Banner)
+index_img: https://github.com/Jaylin03/blog-images/blob/master/home-design%20(2).jpg # 替换为你喜欢的首页大图
+
+# --------------------------------------------------------
+# 社交图标 (侧边栏和页脚)
+social:
+  fab fa-github: https://github.com/jaylin03 || Github || "#000000"
+  fas fa-envelope: mailto:jaylon03.lee@gmail.com || Email || "#0078D7"
+
+# --------------------------------------------------------
+# 侧边栏设置
+sidebar:
+  position: left # 侧边栏在左侧
+  display:
+    post: true
+    archive: true
+    tag: true
+
+# --------------------------------------------------------
+# 评论系统 (使用 Twikoo，因你之前的 Stellar 配置过)
+comments:
+  use: Twikoo
+  text: true
+  lazyload: false
+  count: true
+  card_post_count: true
+
+twikoo:
+  envId: https://twikoo-1f5dxdu6h-jaylin03s-projects.vercel.app/ # 请填入你之前 Stellar 使用的 Twikoo 环境 ID
+  region: ap-shanghai  # 腾讯云 TCB 所在区域，常用值：ap-shanghai, ap-beijing
+  visitor: true
+  option:
+    lang: window.navigator.language  # 新增：自动识别浏览器语言
+
+# --------------------------------------------------------
+# 其它功能
+# 繁简转换 (Butterfly 自带功能)
+translate:
+  enable: true
+  default: CN # 默认简体
+  delay: 0 # 延迟时间
+
+# 搜索 (推荐本地搜索)
+search:
+  use: local_search
+
+local_search:
+  enable: true
+  preload: false
+  # CDN: https://cdn.jsdelivr.net/npm/hexo-generator-search@2.4.3/dist/search.js

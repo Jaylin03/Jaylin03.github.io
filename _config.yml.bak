@@ -91,7 +91,7 @@ exclude:
 ignore:
 
 # Extensions
-theme: butterfly
+theme: stellar
 
 # 多语言配置（hexo-generator-i18n插件专属配置）
 # 文档：https://github.com/hexojs/hexo-generator-i18n

@@ -94,6 +94,19 @@ search:
 # Extensions
 theme: butterfly
 
+# --------------------------------------------------------
+# Multilingual Generator Settings (i18n)
+# --------------------------------------------------------
+# 这一步是让 /en/ 路径不再 404 的关键
+i18n:
+  type: [page, post]    # 应用于页面和文章
+  generator: [zh-CN, en] # 生成这两种语言的独立路径
+  default: zh-CN        # 默认语言（根目录 / 显示中文）
+  path: :lang/          # 生成路径格式，例如 /en/
+  data:                 # 关联语言文件
+    zh-CN: languages/zh-CN.yml
+    en: languages/en.yml
+
 # Deployment
 deploy:
   type: git

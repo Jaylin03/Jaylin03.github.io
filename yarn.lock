@@ -751,6 +751,13 @@ hexo-generator-category@^2.0.0:
   dependencies:
     hexo-pagination "3.0.0"
 
+hexo-generator-i18n@^0.0.10:
+  version "0.0.10"
+  resolved "https://registry.npmjs.org/hexo-generator-i18n/-/hexo-generator-i18n-0.0.10.tgz"
+  integrity sha512-MMKgo125xlzMeimxoaaI6udzER0MBIlLM7Cgda/HuMGcq+nfxqg+36AYnQs/zukCdNbWSesuOwW48BTbWBNaRA==
+  dependencies:
+    lodash "^4.15.0"
+
 hexo-generator-index@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/hexo-generator-index/-/hexo-generator-index-4.0.0.tgz"
@@ -1165,6 +1172,11 @@ lodash.merge@^4.6.2:
   version "4.6.2"
   resolved "https://registry.npmjs.org/lodash.merge/-/lodash.merge-4.6.2.tgz"
   integrity sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==
+
+lodash@^4.15.0:
+  version "4.17.21"
+  resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 lower-case@^2.0.2:
   version "2.0.2"

@@ -7,21 +7,15 @@ title: Jaylin的跨境电商运营知识库
 subtitle: '深耕跨境，运营落地，高效增长'
 description: 'Jaylin的跨境电商运营知识库，专注分享FB广告投放、Google广告优化、TK广告实操、WordPress/Shopify独立站基建、Alibaba国际站运营、敦煌网运营技巧，附n8n运营自动化落地实践心得。'
 keywords: '跨境电商运营,FB广告投放,Google广告运营,TK广告投放,WordPress独立站,Shopify建站,Alibaba国际站运营,敦煌网运营,n8n自动化'
-# 修正：Hexo原生language字段仅支持字符串（默认语言）
-language: zh-CN  # 默认语言为中文
-default_language: zh-CN  # 保留主题可能用到的默认语言字段
 author: Jaylin
-# 英文核心配置（供主题双语切换使用）
-en_title: Jaylin's Cross-border E-commerce Operation Base
-en_subtitle: 'Deepen Cross-border, Implement Operations, Drive Efficient Growth'
-en_description: "Jaylin's cross-border e-commerce operation knowledge base focuses on sharing FB ad delivery, Google ad optimization, TK ad practice, WordPress/Shopify independent site infrastructure, Alibaba.com operation, DHgate operation skills, with n8n operation automation implementation experience."
-en_keywords: 'Cross-border E-commerce Operation, FB Ad Delivery, Google Ad Operation, TK Ad Delivery, WordPress Independent Site, Shopify Site Building, Alibaba.com Operation, DHgate Operation, n8n Automation'
+language: [zh-CN, en]
+default_language: zh-CN
 timezone: 'Asia/Shanghai'
 
 # URL
 url: https://jaylin03.github.io
 root: /
-permalink: :lang/:year/:month/:day/:title/  # 修正：添加:lang占位符，生成多语言路径（如/en/2024/05/...）
+permalink: :year/:month/:day/:title/  # 修正：添加:lang占位符，生成多语言路径（如/en/2024/05/...）
 permalink_defaults:
 pretty_urls:
   trailing_index: true
@@ -88,17 +82,26 @@ pagination_dir: page
 # Include / Exclude file(s)
 include:
 exclude:
+# 防止 hexo 原生渲染器重复处理英文文章（由 hexo-generator-i18n 插件处理）
 ignore:
-
+# Search configuration (不要删除，懂成hexo-generator-search)
+search:
+  path: search.xml
+  field: post
+  content: true
 # Extensions
 theme: butterfly
 
 # 多语言配置（hexo-generator-i18n插件专属配置）
-# 文档：https://github.com/hexojs/hexo-generator-i18n
+# 并在文件最末尾添加这段强制指令（非常关键）：
 i18n:
-  languages: [zh-CN, en]  # 支持的语言列表（插件用，替代原生language数组）
-  default_lang: zh-CN     # 与原生默认语言保持一致
-  parseable: true         # 允许生成可被解析的多语言路径
+  type: [page, post]
+  generator: [index, archive, category, tag]
+
+i18n_generator:
+  alias:
+    zh-CN: /
+    en: en/
 
 # Deployment
 deploy:

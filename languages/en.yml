@@ -1,0 +1,20 @@
+# Site
+title: Jaylin's E-commerce Base
+subtitle: 'Deepen Cross-border, Drive Growth'
+description: "Jaylin's Cross-Border E-Commerce Operations Knowledge Base, focusing on sharing FB Ad Campaigns, Google Ads Optimization, TikTok Ads Practical Operations, WordPress/Shopify Independent Website Infrastructure, Alibaba.com Operation, DHgate Operation Skills, along with practical insights on n8n Operational Automation implementation."
+keywords: 'Cross-border, FB Ads, Google Ads'
+author: Jaylin
+
+# 菜单翻译
+menu:
+  home: Home
+  archives: Archives
+  tags: Tags
+  categories: Categories
+  gallery: Gallery  # 新增
+  guestbook: Guestbook
+  languages: Languages
+  chinese: Chinese
+  english: English
+  search: Search
+

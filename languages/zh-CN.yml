@@ -1,0 +1,19 @@
+# Site
+title: Jaylin的跨境电商运营知识库
+subtitle: '深耕跨境，运营落地，高效增长'
+description: 'Jaylin的跨境电商运营知识库，专注分享FB广告投放、Google广告优化、TK广告实操、WordPress/Shopify独立站基建、Alibaba国际站运营、敦煌网运营技巧，附n8n运营自动化落地实践心得。'
+keywords: '跨境电商运营,FB广告投放,Google广告运营'
+author: Jaylin
+
+# 菜单翻译
+menu:
+  home: 首页
+  archives: 归档
+  tags: 标签
+  categories: 分类
+  gallery: 图库
+  guestbook: 留言板
+  languages: 语言
+  chinese: 中文
+  english: English
+  search: 搜索

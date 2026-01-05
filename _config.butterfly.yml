@@ -1,7 +1,17 @@
 # _config.butterfly.yml
-# --------------------------------------------------------
-# 导航菜单配置（使用语言包Key实现多语言）
-# 格式：Key: 路径 || 图标 || 额外CSS(可选)
+# --------------------------------------
+# Hexo Butterfly Theme Configuration
+# --------------------------------------
+
+# --------------------------------------
+# Navigation Settings
+# --------------------------------------
+nav:
+  logo:
+  display_title: true
+  display_post_title: true
+  fixed: false
+
 menu:
   home: / || fas fa-home
   archives: /archives/ || fas fa-archive
@@ -9,37 +19,312 @@ menu:
   categories: /categories/ || fas fa-folder-open
   gallery: /gallery/ || fas fa-images
   guestbook: /guestbook/ || fas fa-comments
+  # 注意：由于删除了 source/en 目录，点击 english 可能会 404
+  # 建议暂时依靠右下角的“繁简转换”或后续手动创建英文分类
   languages:
     chinese: / || fas fa-language
     english: /en/ || fas fa-globe
 
-# --------------------------------------------------------
-# 核心视觉配置
-avatar:
-  img: https://cdn.jsdelivr.net/gh/Jaylin03/blog-images@master/logo_ln3_bull_v8.png # 请替换为你自己的头像链接
-  effect: false # 头像旋转效果
+# --------------------------------------
+# Code Blocks Settings
+# --------------------------------------
+code_blocks:
+  theme: light
+  macStyle: false
+  height_limit: false
+  word_wrap: false
+  copy: true
+  language: true
+  shrink: false
+  fullpage: false
 
-# 顶部图 (Banner)
-index_img: https://cdn.jsdelivr.net/gh/Jaylin03/blog-images@master/home-design-5.jpg # 替换为你喜欢的首页大图
-
-# --------------------------------------------------------
-# 社交图标 (侧边栏和页脚)
+# --------------------------------------
+# Social media links
+# --------------------------------------
 social:
   fab fa-github: https://github.com/jaylin03 || Github || "#000000"
   fas fa-envelope: mailto:jaylon03.lee@gmail.com || Email || "#0078D7"
   fab fa-telegram: https://t.me/your_telegram_username || Telegram || "#0088cc"
 
-# --------------------------------------------------------
-# 侧边栏设置
-sidebar:
-  position: left # 侧边栏在左侧
+# --------------------------------------
+# Image Settings
+# --------------------------------------
+favicon: /img/favicon.png
+
+avatar:
+  img: https://cdn.jsdelivr.net/gh/Jaylin03/blog-images@master/logo_ln3_bull_v8.png
+  effect: false
+
+disable_top_img: false
+default_top_img:
+index_img: https://cdn.jsdelivr.net/gh/Jaylin03/blog-images@master/home-design-5.jpg
+archive_img:
+tag_img:
+tag_per_img:
+category_img:
+category_per_img:
+footer_img: false
+background:
+
+cover:
+  index_enable: true
+  aside_enable: true
+  archives_enable: true
+  default_cover:
+
+error_img:
+  flink: /img/friend_404.gif
+  post_page: /img/404.jpg
+
+error_404:
+  enable: false
+  subtitle: 'Page Not Found'
+  background: /img/error-page.png
+
+post_meta:
+  page:
+    date_type: created
+    date_format: 'YYYY-MM-DD'
+    categories: true
+    tags: false
+    label: true
+  post:
+    position: left
+    date_type: both
+    date_format: relative
+    categories: true
+    tags: true
+    label: true
+
+# --------------------------------------
+# Index page settings
+# --------------------------------------
+index_site_info_top:
+index_top_img_height:
+
+subtitle:
+  enable: false
+  effect: true
+  typed_option:
+  source: false
+  sub:
+
+index_layout: 3
+index_post_content:
+  method: 3
+  length: 500
+
+# --------------------------------------
+# Post Settings
+# --------------------------------------
+toc:
+  post: true
+  page: false
+  number: true
+  expand: false
+  style_simple: false
+  scroll_percent: true
+
+post_copyright:
+  enable: true
+  decode: false
+  author_href:
+  license: CC BY-NC-SA 4.0
+  license_url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+reward:
+  enable: false
+
+post_edit:
+  enable: false
+  url:
+
+related_post:
+  enable: true
+  limit: 6
+  date_type: created
+
+post_pagination: 1
+
+noticeOutdate:
+  enable: false
+  style: flat
+  limit_day: 365
+  position: top
+  message_prev: It has been
+  message_next: days since the last update, the content of the article may be outdated.
+
+# --------------------------------------
+# Footer Settings
+# --------------------------------------
+footer:
+  nav:
+  owner:
+    enable: true
+    since: 2025
+  copyright:
+    enable: true
+    version: true
+  custom_text:
+
+# --------------------------------------
+# Aside Settings
+# --------------------------------------
+aside:
+  enable: true
+  hide: false
+  button: true
+  mobile: true
+  position: right # 你的配置中写的是 left，这里我保留了 right 作为默认，若习惯左侧请改为 left
   display:
-    post: true
     archive: true
     tag: true
+    category: true
+  card_author:
+    enable: true
+    description:
+    button:
+      enable: true
+      icon: fab fa-github
+      text: Follow Me
+      link: https://github.com/jaylin03
+  card_announcement:
+    enable: true
+    content: This is my Blog
+  card_recent_post:
+    enable: true
+    limit: 5
+    sort: date
+    sort_order:
+  card_newest_comments:
+    enable: false
+    sort_order:
+    limit: 6
+    storage: 10
+    avatar: true
+  card_categories:
+    enable: true
+    limit: 8
+    expand: none
+    sort_order:
+  card_tags:
+    enable: true
+    limit: 40
+    color: false
+    orderby: random
+    order: 1
+    sort_order:
+  card_archives:
+    enable: true
+    type: monthly
+    format: MMMM YYYY
+    order: -1
+    limit: 8
+    sort_order:
+  card_post_series:
+    enable: true
+    series_title: false
+    orderBy: 'date'
+    order: -1
+  card_webinfo:
+    enable: true
+    post_count: true
+    last_push_date: true
+    sort_order:
+    runtime_date:
 
-# --------------------------------------------------------
-# 评论系统 (使用 Twikoo，因你之前的 Stellar 配置过)
+rightside_bottom:
+
+# --------------------------------------
+# Translate (繁简转换)
+# --------------------------------------
+translate:
+  enable: true
+  default: 繁
+  # 1: Traditional, 2: Simplified
+  defaultEncoding: 2
+  translateDelay: 0
+  msgToTraditionalChinese: '繁'
+  msgToSimplifiedChinese: '簡'
+
+readmode: true
+
+darkmode:
+  enable: true
+  button: true
+  autoChangeMode: false
+  start:
+  end:
+
+rightside_scroll_percent: false
+
+rightside_item_order:
+  enable: false
+  hide:
+  show:
+
+rightside_config_animation: true
+
+# --------------------------------------
+# Global Settings
+# --------------------------------------
+anchor:
+  auto_update: false
+  click_to_scroll: false
+
+photofigcaption: false
+
+copy:
+  enable: true
+  copyright:
+    enable: false
+    limit_count: 150
+
+wordcount:
+  enable: false
+  post_wordcount: true
+  min2read: true
+  total_wordcount: true
+
+busuanzi:
+  site_uv: true
+  site_pv: true
+  page_pv: true
+
+math:
+  use:
+  per_page: true
+  hide_scrollbar: false
+  mathjax:
+    enableMenu: true
+    tags: none
+  katex:
+    copy_tex: false
+
+# --------------------------------------
+# Search System (Local Search)
+# --------------------------------------
+search:
+  use: local_search
+  placeholder:
+
+  local_search:
+    preload: false
+    top_n_per_article: 1
+    unescape: false
+    pagination:
+      enable: false
+      hitsPerPage: 8
+    CDN:
+
+share:
+  use: sharejs
+  sharejs:
+    sites: facebook,x,wechat,weibo,qq
+
+# --------------------------------------
+# Comments System (Twikoo)
+# --------------------------------------
 comments:
   use: Twikoo
   text: true
@@ -48,51 +333,142 @@ comments:
   card_post_count: true
 
 twikoo:
-  envId: https://twikoo-new-kappa.vercel.app # Vercel Domains
-  region:  # 非腾讯云 TCB 部署，留空
+  envId: https://twikoo-new-kappa.vercel.app
+  region:
   visitor: true
-  # 前端 CDN 版本固定为 v1.6.44，需要后端也保持一致
   js: https://cdn.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.all.min.js
   option:
-    lang: window.navigator.language  # 新增：自动识别浏览器语言
+    lang: window.navigator.language
 
-# --------------------------------------------------------
-# 其它功能
-# 繁简转换 (Butterfly 自带功能)
-translate:
+# --------------------------------------
+# Chat & Analytics
+# --------------------------------------
+chat:
+  use:
+  rightside_button: false
+  button_hide_show: false
+
+baidu_analytics:
+google_analytics:
+cloudflare_analytics:
+microsoft_clarity:
+umami_analytics:
+  enable: false
+google_tag_manager:
+  tag_id:
+  domain:
+
+google_adsense:
+  enable: false
+
+ad:
+  index:
+  aside:
+  post:
+
+site_verification:
+
+# --------------------------------------
+# Beautify / Effect
+# --------------------------------------
+category_ui:
+tag_ui:
+rounded_corners_ui: true
+text_align_justify: false
+mask:
+  header: true
+  footer: true
+preloader:
+  enable: false
+  source: 1
+  pace_css_url:
+enter_transitions: true
+display_mode: light
+beautify:
+  enable: false
+  field: post
+  title_prefix_icon:
+  title_prefix_icon_color:
+font:
+  global_font_size:
+  code_font_size:
+  font_family:
+  code_font_family:
+blog_title_font:
+  font_link:
+  font_family:
+hr_icon:
   enable: true
-  # 1: 繁體 (Traditional)，2: 簡體 (Simplified)
-  defaultEncoding: 2  # 简体作为后备默认值
-  translateDelay: 0 # 延迟时间（ms）
-  msgToTraditionalChinese: '繁' # 按钮文本：切换到繁体时显示的文字
-  msgToSimplifiedChinese: '簡' # 按钮文本：切换到简体时显示的文字
-
-# 搜索 (推荐本地搜索)
-search:
-  use: local_search
-
-local_search:
+  icon:
+  icon_top:
+activate_power_mode:
+  enable: false
+  colorful: true
+  shake: true
+  mobile: false
+canvas_ribbon:
+  enable: false
+canvas_fluttering_ribbon:
+  enable: false
+canvas_nest:
+  enable: false
+fireworks:
+  enable: false
+click_heart:
+  enable: false
+clickShowText:
+  enable: false
+lightbox:
+series:
+  enable: false
+abcjs:
+  enable: false
+mermaid:
+  enable: false
+chartjs:
+  enable: false
+note:
+  style: flat
+  icons: true
+  border_radius: 3
+  light_bg_offset: 0
+pjax:
+  enable: false
+  exclude:
+aplayerInject:
+  enable: false
+snackbar:
+  enable: false
+instantpage: false
+lazyload:
+  enable: false
+  native: false
+  field: site
+  placeholder:
+  blur: false
+pwa:
+  enable: false
+Open_Graph_meta:
   enable: true
-  preload: false
-  # CDN: https://cdn.jsdelivr.net/npm/hexo-generator-search@2.4.3/dist/search.js
+  option:
+structured_data:
+  enable: false
+  alternate_name:
+css_prefix: true
 
-# --------------------------------------------------------
-# 实时时间转换支持
-# 注入脚本和样式
+# --------------------------------------
+# Inject (Your Custom Scripts)
+# --------------------------------------
 inject:
   head:
-    # 根据浏览器语言自动设置繁简转换的初始编码
+    # 自动识别浏览器语言设置繁简
     - |
       <script>
         (function() {
           const lang = navigator.language || navigator.userLanguage;
           const targetEncodingCookie = 'translate-chn-cht';
           const hasUserChoice = localStorage.getItem(targetEncodingCookie);
-          
-          // 如果用户未手动选择过，根据浏览器语言设置
           if (!hasUserChoice) {
-            // zh-TW, zh-HK, zh-MO 等繁体地区 → 设置为繁体(1)
-            // zh-CN, zh-SG 等简体地区或其他语言 → 设置为简体(2)
             const isTraditional = /^zh-(TW|HK|MO)$/i.test(lang);
             const defaultEncoding = isTraditional ? 1 : 2;
             localStorage.setItem(targetEncodingCookie, defaultEncoding);
@@ -100,13 +476,10 @@ inject:
         })();
       </script>
   bottom:
-    # 也可以开启主题自带的相对时间功能
 
-# Butterfly 相对时间设置
-post_meta:
-  page:
-    date_type: both
-    date_format: 'YYYY-MM-DD' # 可改为 relative 或自定义格式
-  post:
-    date_type: both
-    date_format: relative
+CDN:
+  internal_provider: local
+  third_party_provider: jsdelivr
+  version: true
+  custom_format:
+  option:

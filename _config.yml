@@ -15,7 +15,8 @@ timezone: 'Asia/Shanghai'
 # URL
 url: https://jaylin03.github.io
 root: /
-permalink: :year/:month/:day/:title/  # 修正：添加:lang占位符，生成多语言路径（如/en/2024/05/...）
+# 恢复为标准链接格式，去掉了之前插件引入的 :lang 变量，防止报错
+permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true
@@ -28,7 +29,7 @@ tag_dir: tags
 archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
-i18n_dir: :lang  # 多语言文件存放路径（与插件适配）
+# i18n_dir: :lang # 已移除：这是之前插件的残留
 skip_render:
 
 # Writing
@@ -82,26 +83,16 @@ pagination_dir: page
 # Include / Exclude file(s)
 include:
 exclude:
-# 防止 hexo 原生渲染器重复处理英文文章（由 hexo-generator-i18n 插件处理）
 ignore:
-# Search configuration (不要删除，懂成hexo-generator-search)
+
+# Search configuration
 search:
   path: search.xml
   field: post
   content: true
+
 # Extensions
 theme: butterfly
-
-# 多语言配置（hexo-generator-i18n插件专属配置）
-# 并在文件最末尾添加这段强制指令（非常关键）：
-i18n:
-  type: [page, post]
-  generator: [index, archive, category, tag]
-
-i18n_generator:
-  alias:
-    zh-CN: /
-    en: en/
 
 # Deployment
 deploy:

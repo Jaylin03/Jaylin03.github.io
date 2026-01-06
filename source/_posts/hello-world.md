@@ -1,6 +1,10 @@
 ---
 title: 你好世界
-lang: zh-CN
+date: 2026-01-05 20:00:00
+tags: [News]
+lang: zh-CN 
+categories: [Announcement]
+description: This is a test post for Chinese users.
 ---
 欢迎来到 [Hexo](https://hexo.io/)！这是你的第一篇文章。查看 [文档](https://hexo.io/docs/) 了解更多信息。如果你在使用 Hexo 时遇到问题，可以在 [故障排除](https://hexo.io/docs/troubleshooting.html) 中找到答案，或者可以在 [GitHub](https://github.com/hexojs/hexo/issues) 上向我提问。
 

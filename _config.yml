@@ -8,7 +8,8 @@ subtitle: '深耕跨境，运营落地，高效增长'
 description: 'Jaylin的跨境电商运营知识库，专注分享FB广告投放、Google广告优化、TK广告实操、WordPress/Shopify独立站基建、Alibaba国际站运营、敦煌网运营技巧，附n8n运营自动化落地实践心得。'
 keywords: '跨境电商运营,FB广告投放,Google广告运营,TK广告投放,WordPress独立站,Shopify建站,Alibaba国际站运营,敦煌网运营,n8n自动化'
 author: Jaylin
-language: [zh-CN, en]
+# 确保 language 保持这样的格式，以兼容 i18n 插件
+language: zh-CN
 default_language: zh-CN
 timezone: 'Asia/Shanghai'
 
@@ -16,7 +17,7 @@ timezone: 'Asia/Shanghai'
 url: https://jaylin03.github.io
 root: /
 # 恢复为标准链接格式，去掉了之前插件引入的 :lang 变量，防止报错
-permalink: :year/:month/:day/:title/
+permalink: posts/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true
@@ -58,7 +59,8 @@ prismjs:
   tab_replace: ''
 
 # Home page setting
-index_generator:
+index_generator: 
+  #禁用默认首页生成器，改用i18n版本
   path: ''
   per_page: 10
   order_by: -date
@@ -94,18 +96,31 @@ search:
 # Extensions
 theme: butterfly
 
+# alias:
+  # en/: en/archives/
+
 # --------------------------------------------------------
-# Multilingual Generator Settings (i18n)
+# New i18n Index Configuration
 # --------------------------------------------------------
-# 这一步是让 /en/ 路径不再 404 的关键
-i18n:
-  type: [page, post]    # 应用于页面和文章
-  generator: [zh-CN, en] # 生成这两种语言的独立路径
-  default: zh-CN        # 默认语言（根目录 / 显示中文）
-  path: :lang/          # 生成路径格式，例如 /en/
-  data:                 # 关联语言文件
-    zh-CN: languages/zh-CN.yml
-    en: languages/en.yml
+# index_generator_i18n:
+  # path: :lang/
+  # per_page: 10
+  # order_by: -date
+  # 关键补充：明确告诉插件需要生成哪些语言的首页
+  # languages: [zh-CN, en]
+  # default_language: zh-CN  # 这一行确保根目录 / 显示中文首页
+  # include_others: true
+  # base: /
+  # hide_default_in_url: true
+  # 关键点 1: 必须显式声明 zh-CN 是默认语言
+  # 关键点 2: 告诉插件，默认语言不需要路径前缀
+
+# i18n:
+  # type: [page, post]
+  # 必须包含 index，插件才会根据主页生成器去复制一份英文版
+  # generator: [index, archive, category, tag, guestbook, gallery]
+  # default: zh-CN
+  # path: :lang/
 
 # Deployment
 deploy:

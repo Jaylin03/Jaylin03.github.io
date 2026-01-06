@@ -106,6 +106,9 @@ aside:
     code: Code
   card_toc: Contents
   card_post_series: Post Series
+  aside:
+  card_author:
+    description: "Your English Bio Here"
 
 date_suffix:
   just: Just now

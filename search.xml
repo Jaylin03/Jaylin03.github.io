@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>跨境电商运营：从零到一的自动化增长指南</title>
+    <url>/posts/cross-border-ecommerce-intro/</url>
+    <content><![CDATA[为什么选择自动化运营？在跨境电商领域，FB广告投放和独立站维护占据了运营人员大量的时间。通过 n8n 这种自动化工具，我们可以实现：
+
+自动采集：定时抓取竞品价格。
+消息推送：订单状态实时同步到手机。
+高效投放：批量生成广告素材并监控回报率。
+
+
+注意：这篇文章带有 lang: zh-CN 标签，它应该只出现在你的中文首页中。
+
+]]></content>
+      <categories>
+        <category>运营干货</category>
+      </categories>
+      <tags>
+        <tag>跨境电商</tag>
+        <tag>自动化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>你好世界</title>
+    <url>/posts/hello-world/</url>
+    <content><![CDATA[欢迎来到 Hexo！这是你的第一篇文章。查看 文档 了解更多信息。如果你在使用 Hexo 时遇到问题，可以在 故障排除 中找到答案，或者可以在 GitHub 上向我提问。
+快速开始创建新文章$ hexo new &quot;My New Post&quot;
+
+更多信息：写作
+运行服务器$ hexo server
+
+更多信息：服务器
+生成静态文件$ hexo generate
+
+更多信息：生成
+部署到远程网站$ hexo deploy
+
+更多信息：一键部署
+]]></content>
+      <categories>
+        <category>Announcement</category>
+      </categories>
+      <tags>
+        <tag>News</tag>
+      </tags>
+  </entry>
+</search>

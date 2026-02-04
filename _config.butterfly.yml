@@ -13,12 +13,13 @@ nav:
   fixed: false
 
 menu:
-  home: / || fas fa-home
-  archives: /archives/ || fas fa-archive
-  tags: /tags/ || fas fa-tags
-  categories: /categories/ || fas fa-folder-open
-  gallery: /gallery/ || fas fa-images
-  guestbook: /guestbook/ || fas fa-comments
+  首页: / || fas fa-home
+  归档: /archives/ || fas fa-archive
+  标签: /tags/ || fas fa-tags
+  分类: /categories/ || fas fa-folder-open
+  关于我: /about/ || fas fa-user
+  图库: /gallery/ || fas fa-images
+  留言板: /guestbook/ || fas fa-comments
   # 注意：由于删除了 source/en 目录，点击 english 可能会 404
   # 建议暂时依靠右下角的“繁简转换”或后续手动创建英文分类
   languages:

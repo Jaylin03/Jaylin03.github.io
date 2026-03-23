@@ -63,4 +63,4 @@ jobs:
           git init
           git add .
           git commit -m "Auto deploy: $(date +'%Y-%m-%d %H:%M:%S')"
-          git push --force https://${GH_TOKEN}@github.com/Jaylin03/Jaylin03.github.io.git master
+          git push --force https://x-access-token:${GH_TOKEN}@github.com/Jaylin03/Jaylin03.github.io.git master

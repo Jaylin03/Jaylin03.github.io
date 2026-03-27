@@ -22,9 +22,9 @@ menu:
   留言板: /guestbook/ || fas fa-comments
   # 注意：由于删除了 source/en 目录，点击 english 可能会 404
   # 建议暂时依靠右下角的“繁简转换”或后续手动创建英文分类
-  languages:
-    chinese: / || fas fa-language
-    english: /en/ || fas fa-globe
+  # languages:
+  #   chinese: / || fas fa-language
+  #   english: /en/ || fas fa-globe
 
 # --------------------------------------
 # Code Blocks Settings

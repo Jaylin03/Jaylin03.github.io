@@ -20,8 +20,8 @@ root: /
 permalink: posts/:title/
 permalink_defaults:
 pretty_urls:
-  trailing_index: true
-  trailing_html: true
+  trailing_index: false
+  trailing_html: false
 
 # Directory
 source_dir: source
@@ -127,3 +127,7 @@ deploy:
   type: git
   repo: git@github.com:jaylin03/jaylin03.github.io.git
   branch: master
+
+# Sitemap (hexo-generator-sitemap)
+sitemap:
+  path: sitemap.xml

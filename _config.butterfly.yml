@@ -452,9 +452,7 @@ pwa:
 Open_Graph_meta:
   enable: true
   option:
-structured_data:
-  enable: false
-  alternate_name:
+structured_data: true
 css_prefix: true
 
 # --------------------------------------

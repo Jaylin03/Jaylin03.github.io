@@ -1,6 +1,7 @@
 ---
 title: 搬瓦工(BandwagonHost) 2026最新评测：CN2 GIA线路依然是跨境电商首选吗？
 date: 2026-02-04 10:00:00
+abbrlink: b8f3c7
 tags: [搬瓦工, VPS推荐, CN2 GIA, 科学上网, 跨境电商]
 categories: [VPS评测]
 cover: /img/bandwagon-cover.jpg

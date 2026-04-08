@@ -1,6 +1,7 @@
 ---
 title: 每日 AI 开源速递
 date: 2026-03-23
+abbrlink: a7e2b6
 categories: 
   - AI 资讯
   - 开源项目

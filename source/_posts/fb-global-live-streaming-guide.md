@@ -1,6 +1,7 @@
 ---
 title: Facebook全球直播从零到一：账号搭建与直投实操全攻略
 date: 2026-04-02
+abbrlink: b2e4d1
 categories:
  - Facebook-营销
  - 跨境直播

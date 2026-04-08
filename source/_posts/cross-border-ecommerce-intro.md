@@ -1,6 +1,7 @@
 ---
 title: 跨境电商运营：从零到一的自动化增长指南
 date: 2026-01-05 21:00:00
+abbrlink: d1b5e9
 lang: zh-CN
 tags: [跨境电商, 自动化]
 categories: [运营干货]

@@ -1,6 +1,7 @@
 ---
 title: 你好世界
 date: 2026-01-05 20:00:00
+abbrlink: e2c6f0
 tags: [News]
 lang: zh-CN 
 categories: [Announcement]

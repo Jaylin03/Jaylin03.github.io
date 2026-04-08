@@ -1,6 +1,7 @@
 ---
 title: 最新 GitHub AI与开发开源项目盘点
 date: 2026-03-24
+abbrlink: f6d1a5
 categories:
   - 开源速递
 tags:

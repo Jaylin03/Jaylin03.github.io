@@ -1,6 +1,7 @@
 ---
 title: Facebook B端精准投流实战：3个技巧锁定海外批发商
 date: 2026-04-02
+abbrlink: a1f3c9
 categories:
  - Facebook-营销
  - 跨境电商

@@ -1,6 +1,7 @@
 ---
 title: 打破 Agent 记忆孤岛：12 款高 Star 开源记忆系统深度盘点
 date: 2026-03-26 09:21:00+08:00
+abbrlink: c3a7f2
 categories:
  - AI-资讯
  - 开源项目

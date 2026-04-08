@@ -1,6 +1,7 @@
 ---
 title: 晚高峰2K/4K直播推流实测：搬瓦工CN2 GIA vs Lisa主机Cogent线路深度对比
 date: 2026-02-04 11:00:00
+abbrlink: c9a4d8
 tags: [搬瓦工, 直播推流, CN2 GIA, Lisa主机, 测评, 4K直播]
 categories: [VPS评测]
 cover: /img/streaming-cover.jpg

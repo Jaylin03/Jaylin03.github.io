@@ -17,7 +17,7 @@ timezone: 'Asia/Shanghai'
 url: https://jaylin03.github.io
 root: /
 # 恢复为标准链接格式，去掉了之前插件引入的 :lang 变量，防止报错
-permalink: posts/:title/
+permalink: posts/:abbrlink/
 permalink_defaults:
 pretty_urls:
   trailing_index: false
@@ -131,3 +131,27 @@ deploy:
 # Sitemap (hexo-generator-sitemap)
 sitemap:
   path: sitemap.xml
+  tags: true
+  categories: true
+
+# Short permalink generator (hexo-abbrlink)
+abbrlink:
+  alg: crc32
+  rep: hex
+  drafts: false
+  force: false
+
+# Static asset minification (hexo-neat)
+neat_enable: true
+neat_html:
+  enable: true
+  exclude:
+neat_css:
+  enable: true
+  exclude:
+neat_js:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:

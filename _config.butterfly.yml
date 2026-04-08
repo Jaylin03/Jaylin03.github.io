@@ -44,8 +44,8 @@ code_blocks:
 # --------------------------------------
 social:
   fab fa-github: https://github.com/jaylin03 || Github || "#000000"
-  fas fa-envelope: mailto:jaylon03.lee@gmail.com || Email || "#0078D7"
-  fab fa-telegram: https://t.me/your_telegram_username || Telegram || "#0088cc"
+  fas fa-envelope: javascript:; || jaylon03.lee[at]gmail.com || "#0078D7"
+  fab fa-telegram: https://t.me/JaylonLee || Telegram || "#0088cc"
 
 # --------------------------------------
 # Image Settings
@@ -442,7 +442,7 @@ snackbar:
   enable: false
 instantpage: false
 lazyload:
-  enable: false
+  enable: true
   native: false
   field: site
   placeholder:

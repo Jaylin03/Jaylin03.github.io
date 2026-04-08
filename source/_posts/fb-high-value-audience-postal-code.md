@@ -1,6 +1,7 @@
 ---
 title: Facebook高价值人群精准投放：邮编定位法实操指南
 date: 2026-04-02
+abbrlink: e5c9f4
 categories:
  - Facebook-营销
  - 高客单投放

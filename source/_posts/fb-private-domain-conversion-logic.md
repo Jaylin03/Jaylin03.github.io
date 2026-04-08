@@ -1,6 +1,7 @@
 ---
 title: 跨境私域转化逻辑：聊单模式 vs 独立站模式深度对比
 date: 2026-04-02
+abbrlink: d4b8e3
 categories:
  - Facebook-营销
  - 跨境私域
